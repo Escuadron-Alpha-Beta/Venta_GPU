@@ -10,6 +10,10 @@ class Perfil extends React.Component{
     }
     componentDidMount() {}
     render() {
-        
+        return(
+            <div>
+                
+            </div>
+        );
     }
 }

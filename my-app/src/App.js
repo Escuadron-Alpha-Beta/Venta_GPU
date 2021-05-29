@@ -15,6 +15,7 @@ import Home from "./Paginas/Home";
 import Perfil from "./Paginas/Perfil";
 import Productos from "./Paginas/Productos";
 import Login from "./Paginas/Login";
+import SignUp from "./Paginas/Signup";
 
 class App extends Component {
 
@@ -23,7 +24,7 @@ class App extends Component {
     return (
       <div>
         <Navbar bg="dark" variant="dark" fixed="top">
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="/home">GPU Heaven</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/Productos">Productos</Nav.Link>
@@ -35,14 +36,12 @@ class App extends Component {
               <Button variant="outline-info">Search</Button>
             </Form>
         </Navbar>
-        <br />
+        <br/>
         <br/>
         <br/>
         <div id="Header">
           <BrowserRouter>
             <div>
-              aqui poner lo del header
-              
               <Switch>
                 <Route path="/" component={Home} exact/>
                 <Route path="/Home" component={Home}exact />
