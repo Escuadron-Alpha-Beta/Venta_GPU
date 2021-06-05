@@ -1,31 +1,26 @@
-import React, {Component} from 'react';
- 
-class Navbar extends Component{
-    render(){
-        return(
-            <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-          <a
-            className="navbar-brand col-sm-3 col-md-2 mr-0"
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GPU MARKET BOISSS
-          </a>
+import React, { Component } from 'react';
+import NavBar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav'
+import 'bootstrap/dist/css/bootstrap.css';
 
-          <ul className="navbar-nav px-3">
-            <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
-              <small className="text-white">
-                <span id="account">
-                  Account :{this.props.account}
-                </span>
-              </small>
-            </li>
-          </ul>
-          
-
-        </nav>
-        );
-    }
+class Navbar extends Component {
+  render() {
+    return (
+      <div>
+        <NavBar bg="dark" variant="dark" fixed="top">
+          <NavBar.Brand href="/home">GPU VENTA BOISS</NavBar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/Productos">Productos</Nav.Link>
+            <Nav.Link href="/Perfil">Perfil</Nav.Link>
+            <Nav.Link href="">Account :{this.props.account}</Nav.Link>
+          </Nav>
+        </NavBar>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    );
+  }
 }
 export default Navbar;
