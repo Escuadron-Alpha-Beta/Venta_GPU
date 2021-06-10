@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer, MDBCard, MDBCardTitle, MDBBtn, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-
+import Carousel from "./Home/Carousel";
 //var firebase = require("firebase");
 
 class Home extends React.Component {
@@ -15,30 +15,26 @@ class Home extends React.Component {
     }
     render() {
         return (
-            <div>
-                <Container>
-                    <MDBContainer>
-                        <h4>Una Compañia Hecha Para Gamers</h4>
-                        <MDBCarousel activeItem={1} length={3} showControls={true} showIndicators={true} className="z-depth-1">
-
-                        </MDBCarousel>
+                <div> 
+                 <header margin='25px'>
+                 <h1 
+                        style={
+                            {
+                                fontSize: 35,
+                                textAlign: "center",
+                                        
+                        }}
+                        title="Title attribute">Una Compañia Hecha Para Gamers</h1>
+                </header>  
+                <div style={{ backgroundImage: `url(${"https://www.modern-notoriety.com/wp-content/uploads/2013/11/dark-wood-flooring.jpg"})` }}>
+                <Container style={{ margin: '12px auto'}}>
+                    <MDBContainer >                              
+                        <Carousel/>   
                     </MDBContainer>
-                    <MDBRow>
-                        <MDBCol>
-                            <MDBCard>
-                                <h6>Aqui vienen los items</h6>
-                            </MDBCard>
-                        </MDBCol>
-                    </MDBRow>
                 </Container>
-                <div class="card w-75">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Button</a>
-                    </div>
+                
                 </div>
-            </div>
+                </div>
         )
 
     }
