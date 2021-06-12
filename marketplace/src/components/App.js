@@ -93,17 +93,6 @@ class App extends Component {
             </main>
           </div>
         </div>
-        <div id="Header">
-          <BrowserRouter>
-            <div>
-              <Switch>
-                <Route path="/Home" component={Home} exact/>
-                <Route path="/Productos" component={Productos} exact />
-                <Route path="/Perfil" component={Perfil} exact />
-              </Switch>
-            </div>
-          </BrowserRouter>
-        </div>
       </div>
     );
   }

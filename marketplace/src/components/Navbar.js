@@ -12,12 +12,10 @@ class Navbar extends Component {
           <Nav className="mr-auto">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/Productos">Productos</Nav.Link>
-            <Nav.Link href="/Perfil">Perfil</Nav.Link>
+            <Nav.Link href="/Venta">Vender</Nav.Link>
             <Nav.Link href="">Account :{this.props.account}</Nav.Link>
           </Nav>
         </NavBar>
-        <br/>
-        <br/>
         <br/>
       </div>
     );
