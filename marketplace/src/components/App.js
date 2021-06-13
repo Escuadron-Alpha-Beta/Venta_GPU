@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import Web3 from 'web3'
 import Marketplace from '../abis/Marketplace.json'
+
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from './Navbar'
 import Main from './Main'
+import Venta from './Venta'
 
 class App extends Component {
 
@@ -81,17 +84,18 @@ class App extends Component {
       <div>
         <Navbar account={this.state.account} />
         <div className="container-fluid mt-5">
-          <div className="row">
-            <main role=" main" className="col-lg-12 d-flex">
-              {this.state.loading
-                ? <div id="loader" className="text-center"><p className="text-center">LOADING...</p></div>
-                : <Main 
-                productos ={this.state.productos } 
-                crearProduct = {this.crearProduct} 
-                comprarProduct = {this.comprarProduct}/>
-              }
-            </main>
-          </div>
+        <div id="Header">
+          <BrowserRouter>
+            <div>
+              <Switch>
+                <Route path="/" component={Main} exact/>
+                <Route path="/Productos" component={Main} exact />
+                <Route path="/Venta" component={Venta}exact/>\
+                hacer un if si esta login el usuario y poner perfil
+              </Switch>
+            </div>
+          </BrowserRouter>
+        </div>
         </div>
       </div>
     );
