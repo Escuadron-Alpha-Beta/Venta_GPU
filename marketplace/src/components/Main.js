@@ -73,7 +73,7 @@ class Main extends Component {
     render() {
         return (
             <div id="contenido">
-                <h2>Comprar producto</h2>
+                <h2>Comprar Producto</h2>
                 <table className="table">
                     <thead>
                         <tr>
@@ -83,12 +83,13 @@ class Main extends Component {
                             <th scope="col">Cantidad</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Dueño</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody id="productList">
                         {this.state.productos.map((producto, key) => {
                             return (
-                                <tr key={key}>
+                                <tr className="rowData" key={key}>
                                     <th scope="row">{producto.Id.toString()}</th>
                                     <td>{producto.Nombre.toString()}</td>
                                     <td>{producto.Modelo.toString()}</td>

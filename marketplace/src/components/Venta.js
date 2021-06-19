@@ -121,7 +121,7 @@ class Venta extends Component {
                     <button type="submit" className="btn btn-primary">Añadir Producto</button>
                 </form>
                 <p> </p>
-                <h2>Comprar producto</h2>
+                <h2>Comprar Producto</h2>
                 <table className="table">
                     <thead>
                         <tr>
@@ -131,19 +131,20 @@ class Venta extends Component {
                             <th scope="col">Cantidad</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Dueño</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody id="productList">
                         {this.state.productos.map((producto, key) => {
                             return (
-                                <tr key={key}>
+                                <tr className="rowData" key={key}>
                                     <th scope="row">{producto.Id.toString()}</th>
                                     <td>{producto.Nombre.toString()}</td>
                                     <td>{producto.Modelo.toString()}</td>
                                     <td>{producto.Cantidad.toString()}</td>
                                     <td>{window.web3.utils.fromWei(producto.price.toString(), 'Ether')} ETH</td>
                                     <td>{producto.Owner}</td>
-                                    <td>{!producto.comprado
+                                    <td className="tdBoton">{!producto.comprado
                                         ? <button
                                             name={producto.Id}
                                             value={producto.price}
