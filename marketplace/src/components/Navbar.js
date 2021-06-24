@@ -8,9 +8,9 @@ class Navbar extends Component {
     return (
       <div>
         <NavBar bg="dark" variant="dark" fixed="top">
-          <NavBar.Brand href="/home">GPU VENTA BOISS</NavBar.Brand>
+          <NavBar.Brand href="/Home">GPU VENTA BOISS</NavBar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/Home">Home</Nav.Link>
             <Nav.Link href="/Productos">Productos</Nav.Link>
             <Nav.Link href="/Venta">Vender</Nav.Link>
             <Nav.Link href="">Account :{this.props.account}</Nav.Link>

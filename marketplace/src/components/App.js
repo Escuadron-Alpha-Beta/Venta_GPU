@@ -5,6 +5,7 @@ import Marketplace from '../abis/Marketplace.json'
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from './Navbar'
+import Home from './Home'
 import Main from './Main'
 import Venta from './Venta'
 
@@ -89,6 +90,7 @@ class App extends Component {
             <div>
               <Switch>
                 <Route path="/" component={Main} exact/>
+                <Route path="/Home" component={Home} exact />   
                 <Route path="/Productos" component={Main} exact />
                 <Route path="/Venta" component={Venta}exact/>\
                 hacer un if si esta login el usuario y poner perfil
