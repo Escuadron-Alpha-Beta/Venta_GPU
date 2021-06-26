@@ -8,7 +8,8 @@ import Navbar from './Navbar'
 import Home from './Home'
 import Main from './Main'
 import Venta from './Venta'
-
+import FooterPage from './Footer';
+import './style.css';
 class App extends Component {
 
   async loadWeb3() {
@@ -99,6 +100,12 @@ class App extends Component {
           </BrowserRouter>
         </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <FooterPage style = "position:fixed, bottom:0, height:auto, margin-top:40px, width:100%, text-align:center"/>
       </div>
     );
   }
