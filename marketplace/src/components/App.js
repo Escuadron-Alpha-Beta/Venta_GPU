@@ -36,21 +36,21 @@ class App extends Component {
       const marketplace = new web3.eth.Contract(Marketplace.abi, networkData.address)
       this.setState({ marketplace })
       const productCount = await marketplace.methods.productCount().call()
-      this.setState({productCount})
+      this.setState({ productCount })
       //cargar los productos
-      for (var i =1 ; i <= productCount ; i++){
+      for (var i = 1; i <= productCount; i++) {
         const product = await marketplace.methods.productos(i).call()
         this.setState({
-          productos :[...this.state.productos, product]
+          productos: [...this.state.productos, product]
         })
       }
       this.setState({ loading: false })
-      
+
     } else {
       window.alert('Contrato de Marketplace no fue reconocido en la RED')
     }
   }
-  
+
   constructor(props) {
     super(props)
     this.state = {
@@ -67,45 +67,58 @@ class App extends Component {
     await this.loadBlockchainData()
 
   }
-  crearProduct(Nombre, Modelo, Cantidad ,price){
-    this.setState({loading : true})
-    this.state.marketplace.methods.crearProduct(Nombre,Modelo, Cantidad ,price).send({from: this.state.account})
-    .once('receipt',(receipt) => {
-      this.setState({loading : false})
-    })
+  crearProduct(Nombre, Modelo, Cantidad, price) {
+    this.setState({ loading: true })
+    this.state.marketplace.methods.crearProduct(Nombre, Modelo, Cantidad, price).send({ from: this.state.account })
+      .once('receipt', (receipt) => {
+        this.setState({ loading: false })
+      })
   }
-  comprarProduct(id,precio){
-    this.setState({loading : true})
+  comprarProduct(id, precio) {
+    this.setState({ loading: true })
     this.state.marketplace.methods.comprarProduct(id).send({ from: this.state.account, value: precio })
-    .once('receipt',(receipt) => {
-      this.setState({loading : false})
-    })
+      .once('receipt', (receipt) => {
+        this.setState({ loading: false })
+      })
   }
   render() {
     return (
       <div>
         <Navbar account={this.state.account} />
         <div className="container-fluid mt-5">
-        <div id="Header">
-          <BrowserRouter>
-            <div>
-              <Switch>
-                <Route path="/" component={Main} exact/>
-                <Route path="/Home" component={Home} exact />   
-                <Route path="/Productos" component={Main} exact />
-                <Route path="/Venta" component={Venta}exact/>\
-                hacer un if si esta login el usuario y poner perfil
-              </Switch>
-            </div>
-          </BrowserRouter>
+          <div id="Header">
+            <BrowserRouter>
+              <div>
+                <Switch>
+                  <Route path="/" component={Main} exact />
+                  <Route path="/Home" component={Home} exact />
+                  <Route path="/Productos" component={Main} exact />
+                  <Route path="/Venta" component={Venta} exact />\
+                  hacer un if si esta login el usuario y poner perfil
+                </Switch>
+              </div>
+            </BrowserRouter>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <div id="footer">
+            <FooterPage style="position:fixed, bottom:0, height:auto, margin-top:40px, width:100%, text-align:center" />
+          </div>
         </div>
-        </div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <FooterPage style = "position:fixed, bottom:0, height:auto, margin-top:40px, width:100%, text-align:center"/>
+
+
+
+
       </div>
     );
   }

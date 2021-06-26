@@ -31,6 +31,7 @@ class Home extends React.Component {
                         </MDBContainer>
                     </Container>
                 </div>
+                    <br/>
                 <div>
                     <h3 style={{ textAlign: "center" }}>Quienes Somos</h3>
                     <body>

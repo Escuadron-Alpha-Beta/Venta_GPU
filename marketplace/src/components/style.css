@@ -109,18 +109,13 @@
   .rowData td{
     vertical-align:middle;   
   }
-  .footer{
-    background-color: #1e1f5c;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:60px;   /* Height of the footer */
-  }
   #footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:60px;   /* Height of the footer */
-    background:rgb(45, 44, 80);
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/ 
+    height: 280px;
+    background: #cfcfd3;
 }
  

@@ -160,6 +160,10 @@ class Venta extends Component {
                         })}
                     </tbody>
                 </table>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </div>
         );
     }
