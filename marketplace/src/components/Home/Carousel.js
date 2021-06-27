@@ -49,7 +49,7 @@ const Car = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} style={{height:483, width: 1335}}/>
+        <img src={item.src} alt={item.altText} style={{height:550, width: 1335}}/>
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
     );

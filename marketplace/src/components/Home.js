@@ -1,8 +1,9 @@
 import React from 'react';
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer, MDBCard, MDBCardTitle, MDBBtn, MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import {MDBContainer} from "mdbreact";
 import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from "./Home/Carousel";
+import FooterPage from './Footer';
 //var firebase = require("firebase");
 
 class Home extends React.Component {
@@ -32,8 +33,9 @@ class Home extends React.Component {
                     </Container>
                 </div>
                     <br/>
-                <div>
+                <div style={{height:120}}>
                     <h3 style={{ textAlign: "center" }}>Quienes Somos</h3>
+                    <header></header>
                     <body>
                         <label>
                             Somos un grupo de estudiantes de UNITEC con el proposito de crear una pagina que sirva para veder tarjetas de video con el uso de la herramienta BlockChain. Un metodo muy interesante de trabajo
@@ -60,10 +62,19 @@ class Home extends React.Component {
                         <label>
                             Ricardo Sanchez    
                         </label>
-                    </body>
-
+                    
+                        <div class="row" style={{ background: '#cfcfd3' }}>
+                            <Container style={{ margin: '12px auto' }}>
+                                <MDBContainer >
+                                    <FooterPage  /> 
+                                </MDBContainer>
+                            </Container>
+                        </div>
+                     </body>
+                     <footer></footer>
                 </div>
             </div>
+            
         )
     }
 }

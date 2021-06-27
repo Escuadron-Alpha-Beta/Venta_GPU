@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Web3 from 'web3'
 import Marketplace from '../abis/Marketplace.json'
 import './style.css'
+import {MDBContainer} from "mdbreact";
+import { Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import FooterPage from './Footer';
 class Main extends Component {
     constructor() {
         super()
@@ -72,6 +76,7 @@ class Main extends Component {
 
     render() {
         return (
+        <div>    
             <div id="contenido">
                 <h2>Comprar Producto</h2>
                 <table className="table">
@@ -113,6 +118,25 @@ class Main extends Component {
                     </tbody>
                 </table>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div  style={{height:50}}>
+                <header></header>
+                <body>
+                    <div class="row" style={{ background: '#cfcfd3' }}>
+                        <Container style={{ margin: '12px auto' }}>
+                            <MDBContainer >
+                                <FooterPage  /> 
+                            </MDBContainer>
+                        </Container>
+                    </div>
+                </body>
+                <footer></footer>
+            </div>
+        </div>
         );
     }
 }

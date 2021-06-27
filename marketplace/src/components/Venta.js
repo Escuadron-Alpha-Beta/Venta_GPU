@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Web3 from 'web3'
 import Marketplace from '../abis/Marketplace.json'
 import './style.css';
+import {MDBContainer} from "mdbreact";
+import { Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import FooterPage from './Footer';
 class Venta extends Component {
     constructor() {
         super()
@@ -72,6 +76,7 @@ class Venta extends Component {
 
     render() {
         return (
+            <div>    
             <div id="contenido">
                 <h1>Añadir Producto</h1>
                 <form onSubmit={(event) => {
@@ -164,7 +169,23 @@ class Venta extends Component {
                 <br/>
                 <br/>
                 <br/>
+                <br/>
+                <br/>
             </div>
+            <div  style={{height:30}}>
+                <header></header>
+                <body>
+                    <div class="row" style={{ background: '#cfcfd3' }}>
+                        <Container style={{ margin: '12px auto' }}>
+                            <MDBContainer >
+                                <FooterPage  /> 
+                            </MDBContainer>
+                        </Container>
+                    </div>
+                </body>
+                <footer></footer>
+            </div>
+        </div>
         );
     }
 }

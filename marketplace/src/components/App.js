@@ -111,14 +111,8 @@ class App extends Component {
           <br/>
           <br/>
           <br/>
-          <div id="footer">
-            <FooterPage style="position:fixed, bottom:0, height:auto, margin-top:40px, width:100%, text-align:center" />
-          </div>
+          
         </div>
-
-
-
-
       </div>
     );
   }
